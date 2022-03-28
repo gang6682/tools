@@ -1,0 +1,154 @@
+{
+	// 模板配置
+	// Example:
+	"logsuccess": {
+		"scope": "javascript,typescript",
+		"prefix": "logsuccess",
+		"body": [
+			"console.log('%c$1', 'color: green;');",
+		],
+		"description": "Log Success"
+	},
+	"logerror": {
+		"scope": "javascript,typescript",
+		"prefix": "logerror",
+		"body": [
+			"console.log('%c$1', 'color: red;');",
+		],
+		"description": "Log Success"
+	},
+	"logwarn": {
+		"scope": "javascript,typescript",
+		"prefix": "logwarn",
+		"body": [
+			"console.log('%c$1', 'color: orange;');",
+		],
+		"description": "Log Success"
+	},
+	"rcfp": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "rcfp",
+		"body": [
+			"import React from 'react';",
+			"import { PageContainer } from '@ant-design/pro-layout';",
+			"",
+			"const $TM_FILENAME_BASE: React.FC = () => {",
+			"\treturn (",
+			"\t\t<PageContainer>",
+			"\t\t\t<div>",
+			"\t\t\t\t$TM_FILENAME_BASE",
+			"\t\t\t</div>",
+			"\t\t</PageContainer>",
+			"\t)",
+			"}",
+			"export default $TM_FILENAME_BASE"
+		],
+		"description": "react function ts page"
+	},
+	"rcf": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "rcf",
+		"body": [
+			"import React from 'react';",
+			"",
+			"const $TM_FILENAME_BASE: React.FC = () => {",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t$TM_FILENAME_BASE",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"export default $TM_FILENAME_BASE"
+		],
+		"description": "react function ts"
+	},
+	"rcc": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "rcc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"export default class $TM_FILENAME_BASE extends React.Component {",
+			"\trender() {",
+			"\t\treturn <div>",
+			"\t\t\t$TM_FILENAME_BASE",
+			"\t\t</div>",
+			"\t}",
+			"}"
+		],
+		"description": "react function ts"
+	},
+	"rcm": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "rcm",
+		"body": [
+			"import type { Effect, Reducer } from 'umi';",
+			"",
+			"export type NAMEState = {",
+			"\tcurrentNAME?: any;",
+			"};",
+			"",
+			"export type NAMEType = {",
+			"\tnamespace: '$TM_FILENAME_BASE';",
+			"\tstate: NAMEState;",
+			"\teffects: {",
+			"\t\tfetchNAME: Effect;",
+			"\t};",
+			"\treducers: {",
+			"\t\tsaveNAME: Reducer<NAMEState>;",
+			"\t};",
+			"};",
+			"",
+			"const $TM_FILENAME_BASE: NAMEType = {",
+			"\tnamespace: '$TM_FILENAME_BASE',",
+			"\t",
+			"\tstate: {",
+			"\t\tcurrentNAME: {},",
+			"\t},",
+			"\t",
+			"\teffects: {",
+			"\t\t*fetchNAME({ payload }, { put }) {",
+			"\t\t\tyield put({",
+			"\t\t\t\ttype: 'saveNAME',",
+			"\t\t\t\tpayload,",
+			"\t\t\t});",
+			"\t\t},",
+			"\t},",
+			"\t",
+			"\treducers: {",
+			"\t\tsaveNAME(state, { payload }) {",
+			"\t\t\treturn {",
+			"\t\t\t\t...state,",
+			"\t\t\t\tcurrentNAME: payload || {},",
+			"\t\t\t};",
+			"\t\t},",
+			"\t},",
+			"};",
+			"",
+			"export default $TM_FILENAME_BASE;",
+		],
+		"description": "react models"
+	},
+	"html": {
+		"scope": "html",
+		"prefix": "html",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html>",
+			"",
+			"<head>",
+			"\t<meta charset='UTF-8'>",
+			"\t<meta http-equiv='X-UA-Compatible' content='IE=edge'>",
+			"\t<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+			"\t<title>雪</title>",
+			"</head>",
+			"",
+			"<body>",
+			"",
+			"</body>",
+			"",
+			"</html>",
+		],
+		"description": "react function ts"
+	},
+}
